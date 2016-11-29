@@ -132,10 +132,12 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 Gulp is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
 
 
-### Install NodeJS
+#### Install NodeJS
 
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
+
+#### After NodeJS installed, run the command
 ```sh
 npm i
 ```
@@ -159,7 +161,7 @@ npm install --save-dev gulp
 #### 3. Run gulp:
 
 ```sh
-$ gulp
+gulp
 ```
 
 The default task will run.
