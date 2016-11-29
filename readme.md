@@ -97,16 +97,14 @@ gulp.task('default', ['watch', 'scripts', 'images']);
   │ │
   │ ├ style.css(*)             — collected from the sass - css file of the this project file
   │ └ style.min.css(**)        — min style.css
-  │ └ style.css.map(**)        — source map sass files
   │
   ├ dev
   │ ├ sass                     — sass - source style project
   │ │
   │ └ js
   │   ├ lib                    — library's/plugins
-  │   │
-  │   ├ jquery-1.11.1.min.js   — jquery
-  │   └ production.js(**)      — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js', 'js/common.js']
+  │   ├ core                   — library's/plugins
+  │   └ jquery-1.11.1.min.js   — jquery
   │
   ├ images                     — images project
   │
@@ -115,6 +113,7 @@ gulp.task('default', ['watch', 'scripts', 'images']);
   │ ├ modernizr.js             — It’s a collection of tests – or “detects” as we like to call them – which run as your web page loads.
   │ ├ ie-detector.js           — IE detector js
   │ ├ libs.js(*)               — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js']
+  │ ├ core.js(*)               — collected in single file ['dev/js/core/*.js']
   │ └ production.min.js(**)    — uglied 'dev/js/production.js'
   │
   ├ Gruntfile.js               - This file is used to configure or define tasks and load Grunt plugins.
@@ -234,7 +233,6 @@ ruby 2.0.0p645 (2015-04-13 revision 50299) [universal.x86_64-darwin15]
 ```
 sudo gem install sass
 ```
-# gulp
 
 [downloads-image]: https://img.shields.io/npm/dm/gulp.svg
 [npm-url]: https://www.npmjs.com/package/gulp
