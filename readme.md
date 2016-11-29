@@ -120,7 +120,6 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 ```
 
 
-
 # Node and Gulp installation
 
 
