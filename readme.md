@@ -24,6 +24,15 @@ The second, older syntax is known as the indented syntax (or just "Sass"). Inspi
 
 ---------------------------------------
 
+## Documentation
+
+For a Getting started guide, API docs, recipes, making a plugin, etc. check out our docs!
+
+- Need something reliable? Check out the [documentation for the current release](/docs/README.md)!
+- Want to help us test the latest and greatest? Check out the [documentation for the next release](https://github.com/gulpjs/gulp/tree/4.0)!
+
+---------------------------------------
+
 ## Sample `gulpfile.js`
 
 This file will give you a taste of what gulp does.
