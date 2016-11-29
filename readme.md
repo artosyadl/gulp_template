@@ -165,6 +165,9 @@ The default task will run.
 gulp production
 ```
 
+This creates a task folder production/
+
+
 # Sass installation
 
 ---
