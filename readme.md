@@ -159,6 +159,12 @@ gulp
 
 The default task will run.
 
+##### 4. if you want to send files to a production run a task:
+
+```
+gulp production
+```
+
 # Sass installation
 
 ---
