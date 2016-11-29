@@ -94,10 +94,10 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 ```
   ├ css/
   │ ├ fonts/                   - fonts imported this project
-  │ ├ plugins/                 - plugin `.css` this project
+  │ ├ plugins/                 - plugin .css this project
   │ │
   │ ├ libs.css                 — collected from the plugins/
-  │ └ style.css                — collected from the `.sass` - `.css` file of the this project file
+  │ └ style.css                — collected from the .sass - .css file of the this project file
   │
   ├ dev/
   │ ├ sass/                    — `.sass` - source style project
