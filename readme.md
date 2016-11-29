@@ -16,6 +16,7 @@ The second, older syntax is known as the indented syntax (or just "Sass"). Inspi
 
 
 # What is gulp?  
+<p width="250">text</p>
 [<img src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" height="257" width="114" align="right" mr-xl>](http://gulpjs.com/)
 
 - **Automation** - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.
