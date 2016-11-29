@@ -137,7 +137,7 @@ First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-clic
 npm i
 ```
 
-#####1. Install gulp globally:
+##### 1. Install gulp globally:
 
 __If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
 to make sure your old version doesn't collide with gulp-cli.__
@@ -146,13 +146,13 @@ to make sure your old version doesn't collide with gulp-cli.__
 npm install --global gulp-cli
 ```
 
-#####2. Install gulp in your project devDependencies:
+##### 2. Install gulp in your project devDependencies:
 
 ```
 npm install --save-dev gulp
 ```
 
-#####3. Run gulp:
+##### 3. Run gulp:
 
 ```
 gulp
