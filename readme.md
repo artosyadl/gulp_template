@@ -13,7 +13,7 @@ Sass has two syntax's. The new main syntax (as of Sass 3) is known as "SCSS" (fo
 The second, older syntax is known as the indented syntax (or just "Sass"). Inspired by Haml's terseness, it's intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Although no longer the primary syntax, the indented syntax will continue to be supported. Files in the indented syntax use the extension `.sass`.
 
 
-# What is gulp?   [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] 
+# What is gulp?   [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
 [<img src="http://riffux.com/work/gulp-2x.png" height="257" width="250" align="right">](http://gulpjs.com/)
 
@@ -133,28 +133,28 @@ First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-clic
 
 
 #### After NodeJS installed, run the command to install modules
-```sh
+```
 npm i
 ```
 
-#### 1. Install gulp globally:
+1. Install gulp globally:
 
 __If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
 to make sure your old version doesn't collide with gulp-cli.__
 
-```sh
+```
 npm install --global gulp-cli
 ```
 
-#### 2. Install gulp in your project devDependencies:
+2. Install gulp in your project devDependencies:
 
-```sh
+```
 npm install --save-dev gulp
 ```
 
-#### 3. Run gulp:
+3. Run gulp:
 
-```sh
+```
 gulp
 ```
 
