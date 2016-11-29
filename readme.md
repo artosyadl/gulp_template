@@ -39,10 +39,9 @@ This file will give you a taste of what gulp does.
 
 ```js
 var gulp = require('gulp');
-var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-image-optimization');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 
@@ -63,7 +62,6 @@ gulp.task('scripts', ['clean'], function() {
   // with sourcemaps all the way down
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
-      .pipe(coffee())
       .pipe(uglify())
       .pipe(concat('all.min.js'))
     .pipe(sourcemaps.write())
