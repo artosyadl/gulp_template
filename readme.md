@@ -98,7 +98,7 @@ gulp.task('default', ['watch', 'scripts', 'images']);
   │ └ style.css                — collected from the .sass - .css file of the this project file
   │
   ├ dev/
-  │ ├ sass/                    — `.sass` - source style project
+  │ ├ sass/                    — .sass - source style project
   │ └ js/
   │   ├ lib/                   — library's/ plugins
   │   ├ core/                  — library's/ work files
