@@ -137,11 +137,10 @@ Gulp is a command-line tool for managing task automation. There are already coun
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
 
-#### After NodeJS installed, run the command
+#### After NodeJS installed, run the command to install modules
 ```sh
 npm i
 ```
-
 
 #### 1. Install gulp globally:
 
