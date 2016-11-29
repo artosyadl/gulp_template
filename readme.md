@@ -128,7 +128,6 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 
 # Node and Gulp installation
 
----
 
 Gulp is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
 
@@ -137,7 +136,9 @@ Gulp is a command-line tool for managing task automation. There are already coun
 
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
-
+```sh
+npm i
+```
 
 
 #### 1. Install gulp globally:
@@ -146,36 +147,22 @@ __If you have previously installed a version of gulp globally, please run `npm r
 to make sure your old version doesn't collide with gulp-cli.__
 
 ```sh
-$ npm install --global gulp-cli
+npm install --global gulp-cli
 ```
 
 #### 2. Install gulp in your project devDependencies:
 
 ```sh
-$ npm install --save-dev gulp
+npm install --save-dev gulp
 ```
 
-#### 3. Create a `gulpfile.js` at the root of your project:
-
-```js
-var gulp = require('gulp');
-
-gulp.task('default', defaultTask);
-
-function defaultTask(done) {
-  // place code for your default task here
-  done();
-}
-
-```
-
-#### 4. Run gulp:
+#### 3. Run gulp:
 
 ```sh
 $ gulp
 ```
 
-The default task will run and do nothing.
+The default task will run.
 
 # Sass installation
 
