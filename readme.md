@@ -137,16 +137,44 @@ Grunt is a command-line tool for managing task automation. There are already cou
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
 
-	Install grunt-cli
+# Getting Started
 
+#### 1. Install gulp globally:
 
-Once you have Node installed, you’ll need to run the following command to install the grunt-cli globally. This gives you the command-line interface for grunt (that’s the cli part) and allows you to use the tool anywhere on your computer.
+__If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
+to make sure your old version doesn't collide with gulp-cli.__
 
-	npm install -g grunt-cli
+```sh
+$ npm install --global gulp-cli
+```
 
-If you’re on a mac/linux and that command fails, you may need to run it with `sudo`
+#### 2. Install gulp in your project devDependencies:
 
-	sudo npm install -g grunt-cli
+```sh
+$ npm install --save-dev gulp
+```
+
+#### 3. Create a `gulpfile.js` at the root of your project:
+
+```js
+var gulp = require('gulp');
+
+gulp.task('default', defaultTask);
+
+function defaultTask(done) {
+  // place code for your default task here
+  done();
+}
+
+```
+
+#### 4. Run gulp:
+
+```sh
+$ gulp
+```
+
+The default task will run and do nothing.
 
 # Sass installation
 
