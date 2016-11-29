@@ -92,38 +92,36 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 # Structure Files
 
 ```
-  ├ css
-  │ ├ fonts                    - fonts imported this project
+  ├ css/
+  │ ├ fonts/                   - fonts imported this project
+  │ ├ plugins/                 - plugin `.css` this project
   │ │
-  │ ├ style.css(*)             — collected from the sass - css file of the this project file
-  │ └ style.min.css(**)        — min style.css
+  │ ├ libs.css                 — collected from the plugins/
+  │ └ style.css                — collected from the `.sass` - `.css` file of the this project file
   │
-  ├ dev
-  │ ├ sass                     — sass - source style project
-  │ │
-  │ └ js
-  │   ├ lib                    — library's/plugins
-  │   ├ core                   — library's/plugins
+  ├ dev/
+  │ ├ sass/                    — `.sass` - source style project
+  │ └ js/
+  │   ├ lib/                   — library's/ plugins
+  │   ├ core/                  — library's/ work files
+  │   │
   │   └ jquery-1.11.1.min.js   — jquery
   │
-  ├ images                     — images project
+  ├ images/                    — images project
   │
-  ├ js
+  ├ js/
   │ ├ common.js                — main js - file project
   │ ├ modernizr.js             — It’s a collection of tests – or “detects” as we like to call them – which run as your web page loads.
   │ ├ ie-detector.js           — IE detector js
-  │ ├ libs.js(*)               — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js']
-  │ ├ core.js(*)               — collected in single file ['dev/js/core/*.js']
-  │ └ production.min.js(**)    — uglied 'dev/js/production.js'
+  │ ├ libs.js                  — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js']
+  │ └ core.js                  — collected in single file ['dev/js/core/*.js']
   │
-  ├ Gruntfile.js               - This file is used to configure or define tasks and load Grunt plugins.
+  ├ gulpfile.js                - This file is used to configure or define tasks and load Gulp plugins.
   ├ package.json               - This file is used by npm to store metadata for projects published as npm modules.
   └ *.html(*)                  - generated html files this project
 ```
 
-  > (&#8727;)&nbsp;&nbsp;&nbsp;&nbsp;- after Grunt compiled development task
-  >
-  > (&#8727;&#8727;)&nbsp;&nbsp;- after Grunt compiled production task
+
 
 # Node and Gulp installation
 
