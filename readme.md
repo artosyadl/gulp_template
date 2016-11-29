@@ -13,7 +13,7 @@ Sass has two syntax's. The new main syntax (as of Sass 3) is known as "SCSS" (fo
 The second, older syntax is known as the indented syntax (or just "Sass"). Inspired by Haml's terseness, it's intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Although no longer the primary syntax, the indented syntax will continue to be supported. Files in the indented syntax use the extension `.sass`.
 
 
-# What is gulp?   [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![OpenCollective Backers][backer-badge]][backer-url] [![OpenCollective Sponsors][sponsor-badge]][sponsor-url] [![Gitter chat][gitter-image]][gitter-url]
+# What is gulp?   [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] 
 
 [<img src="http://riffux.com/work/gulp-2x.png" height="257" width="250" align="right">](http://gulpjs.com/)
 
@@ -229,15 +229,3 @@ sudo gem install sass
 [coveralls-url]: https://coveralls.io/r/gulpjs/gulp
 [coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp/master.svg
 
-[gitter-url]: https://gitter.im/gulpjs/gulp
-[gitter-image]: https://badges.gitter.im/gulpjs/gulp.svg
-
-[backer-url]: #backers
-[backer-badge]: https://opencollective.com/gulpjs/backers/badge.svg?color=blue
-[sponsor-url]: #sponsors
-[sponsor-badge]: https://opencollective.com/gulpjs/sponsors/badge.svg?color=blue
-
-[support-url]: https://opencollective.com/gulpjs#support
-
-[backers-image]: https://opencollective.com/gulpjs/backers.svg
-[sponsors-image]: https://opencollective.com/gulpjs/sponsors.svg
