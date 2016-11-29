@@ -15,9 +15,8 @@ The second, older syntax is known as the indented syntax (or just "Sass"). Inspi
 
 
 
-# What is gulp?  [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![OpenCollective Backers][backer-badge]][backer-url] [![OpenCollective Sponsors][sponsor-badge]][sponsor-url] [![Gitter chat][gitter-image]][gitter-url]
+# What is gulp?  
 [<img src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" height="257" width="114" align="right">](http://gulpjs.com/)
-
 
 - **Automation** - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.
 - **Platform-agnostic** - Integrations are built into all major IDEs and people are using gulp with PHP, .NET, Node.js, Java, and other platforms.
