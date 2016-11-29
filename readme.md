@@ -126,18 +126,19 @@ gulp.task('default', ['watch', 'scripts', 'images']);
   >
   > (&#8727;&#8727;)&nbsp;&nbsp;- after Grunt compiled production task
 
-# Node and Grunt installation
+# Node and Gulp installation
 
 ---
 
-Grunt is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
+Gulp is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
 
-## Install NodeJS
+
+### Install NodeJS
 
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
 
-# Getting Started
+
 
 #### 1. Install gulp globally:
 
