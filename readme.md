@@ -13,8 +13,6 @@ Sass has two syntax's. The new main syntax (as of Sass 3) is known as "SCSS" (fo
 The second, older syntax is known as the indented syntax (or just "Sass"). Inspired by Haml's terseness, it's intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Although no longer the primary syntax, the indented syntax will continue to be supported. Files in the indented syntax use the extension `.sass`.
 
 
-
-
 # What is gulp?  
 
 [<img src="http://riffux.com/work/gulp-2x.png" height="257" width="250" align="right">](http://gulpjs.com/)
@@ -23,13 +21,6 @@ The second, older syntax is known as the indented syntax (or just "Sass"). Inspi
 - **Platform-agnostic** - Integrations are built into all major IDEs and people are using gulp with PHP, .NET, Node.js, Java, and other platforms.
 - **Strong Ecosystem** - Use npm modules to do anything you want + over 2000 curated plugins for streaming file transformations
 - **Simple** - By providing only a minimal API surface, gulp is easy to learn and simple to use
-
-## Documentation
-
-For a Getting started guide, API docs, recipes, making a plugin, etc. check out our docs!
-
-- Need something reliable? Check out the [documentation for the current release](/docs/README.md)!
-- Want to help us test the latest and greatest? Check out the [documentation for the next release](https://github.com/gulpjs/gulp/tree/4.0)!
 
 ## Sample `gulpfile.js`
 
