@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require("gulp-concat"),
     sourcemaps = require('gulp-sourcemaps'),
-    imageop = require('gulp-image-optimization'),
+    imagemin = require('gulp-image-optimization'),
     include = require('gulp-html-tag-include');
 
 // paths
@@ -145,7 +145,7 @@ gulp.task('copy-js', function() {
 
 gulp.task('copy-img', function(cb) {
     gulp.src('images/**/*')
-    .pipe(imageop({
+    .pipe(imagemin({
         optimizationLevel: 5,
         progressive: true,
         interlaced: true

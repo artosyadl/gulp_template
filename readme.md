@@ -13,23 +13,25 @@ Sass has two syntax's. The new main syntax (as of Sass 3) is known as "SCSS" (fo
 The second, older syntax is known as the indented syntax (or just "Sass"). Inspired by Haml's terseness, it's intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Although no longer the primary syntax, the indented syntax will continue to be supported. Files in the indented syntax use the extension `.sass`.
 
 
+# What is gulp?   [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-
-# What is gulp?  [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![OpenCollective Backers][backer-badge]][backer-url] [![OpenCollective Sponsors][sponsor-badge]][sponsor-url] [![Gitter chat][gitter-image]][gitter-url]
-[<img src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" height="257" width="114" align="right">](http://gulpjs.com/)
-
+[<img src="http://riffux.com/work/gulp-2x.png" height="257" width="250" align="right">](http://gulpjs.com/)
 
 - **Automation** - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.
 - **Platform-agnostic** - Integrations are built into all major IDEs and people are using gulp with PHP, .NET, Node.js, Java, and other platforms.
 - **Strong Ecosystem** - Use npm modules to do anything you want + over 2000 curated plugins for streaming file transformations
 - **Simple** - By providing only a minimal API surface, gulp is easy to learn and simple to use
 
+---------------------------------------
+
 ## Documentation
 
 For a Getting started guide, API docs, recipes, making a plugin, etc. check out our docs!
 
-- Need something reliable? Check out the [documentation for the current release](/docs/README.md)!
+- Need something reliable? Check out the [documentation for the current release](http://gulpjs.com/)!
 - Want to help us test the latest and greatest? Check out the [documentation for the next release](https://github.com/gulpjs/gulp/tree/4.0)!
+
+---------------------------------------
 
 ## Sample `gulpfile.js`
 
@@ -37,10 +39,9 @@ This file will give you a taste of what gulp does.
 
 ```js
 var gulp = require('gulp');
-var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-image-optimization');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 
@@ -61,7 +62,6 @@ gulp.task('scripts', ['clean'], function() {
   // with sourcemaps all the way down
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
-      .pipe(coffee())
       .pipe(uglify())
       .pipe(concat('all.min.js'))
     .pipe(sourcemaps.write())
@@ -90,61 +90,75 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 # Structure Files
 
 ```
-  ├ css
-  │ ├ fonts                    - fonts imported this project
+  ├ css/
+  │ ├ fonts/                   - fonts imported this project
+  │ ├ plugins/                 - plugin .css this project
   │ │
-  │ ├ style.css(*)             — collected from the sass - css file of the this project file
-  │ └ style.min.css(**)        — min style.css
-  │ └ style.css.map(**)        — source map sass files
+  │ ├ libs.css                 — collected from the plugins/
+  │ └ style.css                — collected from the .sass - .css file of the this project file
   │
-  ├ dev
-  │ ├ sass                     — sass - source style project
-  │ │
-  │ └ js
-  │   ├ lib                    — library's/plugins
+  ├ dev/
+  │ ├ sass/                    — `.sass` - source style project
+  │ └ js/
+  │   ├ lib/                   — library's/ plugins
+  │   ├ core/                  — library's/ work files
   │   │
-  │   ├ jquery-1.11.1.min.js   — jquery
-  │   └ production.js(**)      — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js', 'js/common.js']
+  │   └ jquery-1.11.1.min.js   — jquery
   │
-  ├ images                     — images project
+  ├ images/                    — images project
   │
-  ├ js
+  ├ js/
   │ ├ common.js                — main js - file project
   │ ├ modernizr.js             — It’s a collection of tests – or “detects” as we like to call them – which run as your web page loads.
   │ ├ ie-detector.js           — IE detector js
-  │ ├ libs.js(*)               — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js']
-  │ └ production.min.js(**)    — uglied 'dev/js/production.js'
+  │ ├ libs.js                  — collected in single file ['dev/js/jquery-1.11.3.min.js', 'dev/js/lib/*.js']
+  │ └ core.js                  — collected in single file ['dev/js/core/*.js']
   │
-  ├ Gruntfile.js               - This file is used to configure or define tasks and load Grunt plugins.
+  ├ gulpfile.js                - This file is used to configure or define tasks and load Gulp plugins.
   ├ package.json               - This file is used by npm to store metadata for projects published as npm modules.
   └ *.html(*)                  - generated html files this project
 ```
 
-  > (&#8727;)&nbsp;&nbsp;&nbsp;&nbsp;- after Grunt compiled development task
-  >
-  > (&#8727;&#8727;)&nbsp;&nbsp;- after Grunt compiled production task
 
-# Node and Grunt installation
 
----
+# Node and Gulp installation
 
-Grunt is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
 
-## Install NodeJS
+Gulp is a command-line tool for managing task automation. There are already countless blog posts and tutorials explaining what it does and how to install it, so we’ll just briefly cover the installation process and then dive in to actually using it.
+
+
+#### Install NodeJS
 
 First of all, you’ll need [NodeJS](https://nodejs.org/en/) which is a one-click install via the link.
 
 
-	Install grunt-cli
+#### After NodeJS installed, run the command to install modules
+```
+npm i
+```
 
+##### 1. Install gulp globally:
 
-Once you have Node installed, you’ll need to run the following command to install the grunt-cli globally. This gives you the command-line interface for grunt (that’s the cli part) and allows you to use the tool anywhere on your computer.
+__If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
+to make sure your old version doesn't collide with gulp-cli.__
 
-	npm install -g grunt-cli
+```
+npm install --global gulp-cli
+```
 
-If you’re on a mac/linux and that command fails, you may need to run it with `sudo`
+##### 2. Install gulp in your project devDependencies:
 
-	sudo npm install -g grunt-cli
+```
+npm install --save-dev gulp
+```
+
+##### 3. Run gulp:
+
+```
+gulp
+```
+
+The default task will run.
 
 # Sass installation
 
@@ -215,4 +229,7 @@ ruby 2.0.0p645 (2015-04-13 revision 50299) [universal.x86_64-darwin15]
 ```
 sudo gem install sass
 ```
-# gulp
+
+[downloads-image]: https://img.shields.io/npm/dm/gulp.svg
+[npm-url]: https://www.npmjs.com/package/gulp
+[npm-image]: https://img.shields.io/npm/v/gulp.svg
