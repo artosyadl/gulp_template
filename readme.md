@@ -22,6 +22,8 @@ The second, older syntax is known as the indented syntax (or just "Sass"). Inspi
 - **Strong Ecosystem** - Use npm modules to do anything you want + over 2000 curated plugins for streaming file transformations
 - **Simple** - By providing only a minimal API surface, gulp is easy to learn and simple to use
 
+---------------------------------------
+
 ## Sample `gulpfile.js`
 
 This file will give you a taste of what gulp does.
