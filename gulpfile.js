@@ -118,7 +118,8 @@ gulp.task('watch', function() {
     gulp.watch(paths.templates + '*.html', ['html-include']);
     gulp.watch(paths.chunks + '*.html', ['html-include']);
     gulp.watch(paths.sass + '**/*.sass', ['sass']);
-    gulp.watch(paths.jsDev + '**/*.js', ['js-libs', 'js-core']);
+    gulp.watch(paths.jsDev + 'lib/*.js', ['js-libs']);
+    gulp.watch(paths.jsDev + 'core/*.js', ['js-core']);
     gulp.watch(paths.js + 'common.js', ['lint']);
     gulp.watch(paths.css + 'plugins/*.css', ['css']);
 });
