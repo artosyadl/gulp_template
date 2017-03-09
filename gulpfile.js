@@ -82,9 +82,9 @@ gulp.task('sass', function() {
 // Lint Task common.js
 gulp.task('lint', function() {
     return gulp.src(paths.js + 'common.js')
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(jshint())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(connect.reload());
 });
 
@@ -92,19 +92,19 @@ gulp.task('lint', function() {
 //-----------------------------------------------------------------------------------
 gulp.task('js-libs', function() {
     return gulp.src([paths.jsDev + 'jquery-1.11.3.min.js', paths.jsDev + 'lib/*.js'])
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(concat('libs.js'))
         .pipe(uglify())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.js))
         .pipe(connect.reload());
 });
 
 gulp.task('js-core', function() {
     return gulp.src(paths.jsDev + 'core/*.js')
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(concat('core.js'))
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.js))
         .pipe(connect.reload());
 });
