@@ -5,8 +5,7 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     jshint = require('gulp-jshint'),
     autoprefixer = require('gulp-autoprefixer'),
-    livereload = require('gulp-livereload'),
-    connect = require('gulp-connect'),
+    browserSync = require('browser-sync').create(),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
@@ -27,12 +26,16 @@ var paths = {
     jsDev: "dev/js/"
 };
 
-
-// connect livereload
+// browser-sync
 //-----------------------------------------------------------------------------------
-gulp.task('web-server', function() {
-    connect.server({
-        livereload: true
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        notify: false,
+        logFileChanges: false,
+        port: 8080,
+        server: {
+            baseDir: ""
+        }
     });
 });
 
@@ -43,7 +46,7 @@ gulp.task('html-include', function() {
     return gulp.src(paths.templates + '*.html')
         .pipe(include())
         .pipe(gulp.dest(''))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 
@@ -55,7 +58,7 @@ gulp.task('css', function() {
         .pipe(autoprefixer('last 15 versions'))
         .pipe(minifyCSS(''))
         .pipe(gulp.dest(paths.css))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 
@@ -68,7 +71,8 @@ gulp.task('sass', function() {
         .pipe(autoprefixer('last 15 versions'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.css))
-        .pipe(connect.reload())
+        // .pipe(connect.reload())
+        .pipe(browserSync.stream())
         .pipe(notify({
             title: 'Task Complete',
             message: 'Development task finished running',
@@ -81,7 +85,7 @@ gulp.task('sass', function() {
 gulp.task('lint', function() {
     return gulp.src(paths.js + 'common.js')
         .pipe(jshint())
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 // Работа с JS
@@ -91,14 +95,14 @@ gulp.task('js-libs', function() {
         .pipe(concat('libs.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.js))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 gulp.task('js-core', function() {
     return gulp.src(paths.jsDev + 'core/*.js')
         .pipe(concat('core.js'))
         .pipe(gulp.dest(paths.js))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 // Смотрим за изминением
@@ -174,7 +178,7 @@ gulp.task('copy-html', function() {
 
 // gulp
 //-----------------------------------------------------------------------------------
-gulp.task('default', ['html-include', 'sass', 'css', 'js-libs', 'js-core', 'web-server', 'watch']);
+gulp.task('default', ['html-include', 'sass', 'css', 'js-libs', 'js-core', 'browser-sync', 'watch']);
 
 // gulp production
 //-----------------------------------------------------------------------------------
